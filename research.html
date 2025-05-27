@@ -19,6 +19,57 @@
         background: linear-gradient(to bottom right, #f0f0f0, #e0e0ff);
         overflow-x: hidden;
       }
+      .articles {
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .articles h2 {
+        text-align: center;
+        font-size: 2em;
+        color: #333;
+        margin-bottom: 40px;
+      }
+
+      .article-list {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .article-card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+      }
+
+      .article-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .article-card h3 {
+        color: #444;
+        margin-bottom: 10px;
+      }
+
+      .article-card p {
+        color: #666;
+        font-size: 0.95em;
+        margin-bottom: 10px;
+      }
+
+      .article-card a {
+        color: #3366cc;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .article-card a:hover {
+        text-decoration: underline;
+      }
 
       header {
         width: 100vw;
@@ -101,13 +152,91 @@
       <a href="hobbies.html">Hobbies</a>
     </nav>
 
-    <div class="under-construction">
-      <div class="emoji">🚧</div>
-      <h2>This Page is Under Construction</h2>
-      <p>
-        We are currently working on this page and it will be updated soon.
-        Please check back later!
-      </p>
-    </div>
+    <section class="articles" id="ai">
+      <h2>AI Articles</h2>
+      <div class="article-list">
+        <article class="article-card">
+          <h3>Foundational Models in AI Development</h3>
+          <p>
+            Introduces core AI architectures that underpin modern applications
+            like NLP and computer vision.
+          </p>
+          <a href="research.html">Read more</a>
+        </article>
+
+        <article class="article-card">
+          <h3>
+            Large Language Models: Architecture, Training, and Applications in
+            Modern AI
+          </h3>
+          <p>
+            Explores how LLMs like GPT are trained, structured, and deployed in
+            real-world systems.
+          </p>
+          <a href="research.html">Read more</a>
+        </article>
+
+        <article class="article-card">
+          <h3>
+            Convolutional Neural Networks: Architecture, Operations, and
+            Practical Considerations
+          </h3>
+          <p>
+            A visual walkthrough of CNNs, their layers, pooling, and relevance
+            to image processing tasks.
+          </p>
+          <a href="research.html">Read more</a>
+        </article>
+
+        <article class="article-card">
+          <h3>
+            Dimensionality Reduction and Generative Models in Machine Learning
+          </h3>
+          <p>
+            Discusses PCA, t-SNE, and how GANs and VAEs generate realistic data
+            from latent representations.
+          </p>
+          <a href="research.html">Read more</a>
+        </article>
+      </div>
+    </section>
+    <section class="articles">
+      <h2>Blockchain Articles</h2>
+      <div class="article-list">
+        <article class="article-card">
+          <h3>
+            Understanding Voting, Sybil Attacks, and Consensus in Blockchain
+          </h3>
+          <p>
+            An overview of how decentralized systems reach agreement, and how
+            they defend against identity-based attacks.
+          </p>
+          <a href="research.html">Read more</a>
+        </article>
+
+        <article class="article-card">
+          <h3>
+            Bitcoin Block Headers, Propagation Delay, Difficulty Adjustment, and
+            Fork Choice
+          </h3>
+          <p>
+            A technical dive into how Bitcoin nodes communicate and adapt to
+            changes, while maintaining chain consistency.
+          </p>
+          <a href="research.html">Read more</a>
+        </article>
+
+        <article class="article-card">
+          <h3>
+            Bitcoin Internals: Data Structures, Signatures, Fees, and Mining
+          </h3>
+          <p>
+            This article explores how Bitcoin manages transactions, incentives,
+            and mining operations under the hood.
+          </p>
+          <a href="research.html">Read more</a>
+        </article>
+      </div>
+    </section>
   </body>
 </html>
