@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Ali Shash | Page In Progress</title>
+    <title>Ali Shash | Projects</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -18,10 +18,10 @@
         font-family: "Roboto", sans-serif;
         background: linear-gradient(to bottom right, #f0f0f0, #e0e0ff);
         overflow-x: hidden;
+        padding-bottom: 100px;
       }
 
       header {
-        width: 100vw;
         background-color: #222;
         color: white;
         padding: 40px 20px;
@@ -29,7 +29,6 @@
       }
 
       nav {
-        width: 100vw;
         background-color: #333;
         display: flex;
         justify-content: center;
@@ -49,27 +48,83 @@
         color: #ffcc00;
       }
 
-      .under-construction {
+      .project-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
         padding: 60px 20px;
-        text-align: center;
-        max-width: 700px;
+        max-width: 1200px;
         margin: auto;
       }
 
-      .under-construction h2 {
-        font-size: 2em;
-        color: #e67e22;
-        margin-bottom: 20px;
+      .project-card {
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease;
       }
 
-      .under-construction p {
-        font-size: 1.2em;
-        color: #444;
+      .project-card:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        background-color: #f9f9f9;
       }
 
-      .emoji {
-        font-size: 3em;
-        margin-bottom: 20px;
+      .project-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      .popup-container {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .popup-content {
+        background: white;
+        margin: 10% auto;
+        padding: 30px;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 600px;
+        position: relative;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+      }
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 26px;
+        font-weight: bold;
+        color: #888;
+        cursor: pointer;
+      }
+
+      .close:hover {
+        color: #000;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
       }
 
       @media (max-width: 768px) {
@@ -77,16 +132,26 @@
           flex-direction: column;
           align-items: center;
         }
+
+        .project-section {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .project-card {
+          width: 90%;
+        }
       }
     </style>
   </head>
+
   <body>
     <header>
       <h1>Ali Shash</h1>
       <p>
         Dhanbad, Jharkhand, India | +91-787-067-7731 |
-        <a href="mailto:eng.ali.shash.in@gmail.com" style="color: #f0f0f0"
-          >eng.ali.shash.in@gmail.com</a
+        <a href="mailto:eng.ali.shash.in@gmail.com" style="color: #f0f0f0">
+          eng.ali.shash.in@gmail.com</a
         >
       </p>
     </header>
@@ -95,19 +160,117 @@
       <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
       <a href="research.html">Research</a>
-
       <a href="skills.html">Skills</a>
       <a href="cv.html">CV</a>
       <a href="hobbies.html">Hobbies</a>
     </nav>
 
-    <div class="under-construction">
-      <div class="emoji">🚧</div>
-      <h2>This Page is Under Construction</h2>
-      <p>
-        We are currently working on this page and it will be updated soon.
-        Please check back later!
-      </p>
+    <!-- Projects Section -->
+    <div class="project-section">
+      <!-- Prometheus Project Card -->
+      <div class="project-card" onclick="openPopup('popup1')">
+        <img src="https://i.postimg.cc/hGjCqDRZ/pro2.png" alt="Prometheus Screenshot" />
+        <!-- <h3>Prometheus Monitoring System</h3> -->
+      </div>
+
+      <!-- Fluentd Project Card -->
+      <div class="project-card" onclick="openPopup('popup2')">
+        <img src="https://i.postimg.cc/MGF96CW6/fluntd.png" alt="Fluentd Screenshot" />
+        <!-- <h3>Fluentd Log Management System</h3> -->
+      </div>
+
+      <!-- News App Project Card -->
+      <div class="project-card" onclick="openPopup('popup3')">
+        <img src="https://i.postimg.cc/yd3vkLdF/app.png" alt="News App Screenshot" />
+        <!-- <h3>News Aggregator Android App</h3> -->
+      </div>
     </div>
+
+    <!-- Popup 1 -->
+    <div id="popup1" class="popup-container">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup1')">&times;</span>
+        <h2>Prometheus Monitoring Project</h2>
+        <p>
+          A real-world system using Prometheus and Grafana to collect and
+          visualize performance metrics from VMs and MySQL. Node and MySQL
+          exporters are used with Grafana dashboards and alert rules.
+        </p>
+        <p>
+          🔗
+          <a
+            href="https://github.com/yourusername/prometheus-monitoring"
+            target="_blank"
+          >
+            GitHub Repository
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Popup 2 -->
+    <div id="popup2" class="popup-container">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup2')">&times;</span>
+        <h2>Fluentd Log Management System</h2>
+        <p>
+          This system uses Fluentd to centralize and analyze logs from MySQL,
+          Java/Python apps, and login forms. Logs are shipped to Elasticsearch
+          and visualized using Kibana. Data flows through Apache2 or Nginx and
+          are filtered for alerts and trends.
+        </p>
+        <p>
+          🔗
+          <a
+            href="https://github.com/yourusername/fluentd-log-system"
+            target="_blank"
+          >
+            GitHub Repository
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Popup 3 -->
+    <div id="popup3" class="popup-container">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup3')">&times;</span>
+        <h2>News Aggregator Android App</h2>
+        <p>
+          This Android application provides personalized news updates based on
+          user preferences and region. Built with Firebase (Auth & Firestore)
+          and NewsAPI, it supports category-based browsing (e.g., tech, science,
+          health) and uses Retrofit with ViewModel architecture for dynamic
+          updates.
+        </p>
+        <p>
+          🔗
+          <a
+            href="https://github.com/yourusername/news-aggregator-app"
+            target="_blank"
+          >
+            GitHub Repository
+          </a>
+        </p>
+      </div>
+    </div>
+    <script>
+      function openPopup(id) {
+        document.getElementById(id).style.display = "block";
+      }
+
+      function closePopup(id) {
+        document.getElementById(id).style.display = "none";
+      }
+
+      window.onclick = function (event) {
+        const popups = document.querySelectorAll(".popup-container");
+        popups.forEach((popup) => {
+          if (event.target == popup) {
+            popup.style.display = "none";
+          }
+        });
+      };
+    </script>
   </body>
 </html>
