@@ -16,7 +16,7 @@
 
       body {
         font-family: "Roboto", sans-serif;
-        background: linear-gradient(to bottom right, #f0f0f0, #e0e0ff);
+        background: linear-gradient(to bottom right, #f0f0f0, #f3f2f2);
         overflow-x: hidden;
       }
 
@@ -101,13 +101,49 @@
       <a href="hobbies.html">Hobbies</a>
     </nav>
 
-    <div class="under-construction">
-      <div class="emoji">🚧</div>
-      <h2>This Page is Under Construction</h2>
-      <p>
-        We are currently working on this page and it will be updated soon.
-        Please check back later!
-      </p>
+    <div style="display: flex; justify-content: center; padding: 40px">
+      <div
+        class="leetcode-card"
+        onclick="window.open('https://leetcode.com/u/scorbio/', '_blank')"
+      >
+        <img
+          src="https://i.postimg.cc/PxWsYTf4/lert.webp"
+          alt="LeetCode"
+          style="max-width: 190px; margin-bottom: 70px"
+        />
+        <!-- <h2>LeetCode</h2>
+        <p>Click to view my profile</p> -->
+      </div>
     </div>
+
+    <style>
+      .leetcode-card {
+        width: 250px; /* minimized width */
+        border: 2px solid #ffffff;
+        border-radius: 12px;
+        padding: 30px 20px;
+        background-color: white;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .leetcode-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .leetcode-card h2 {
+        color: #444;
+        font-size: 1.2em;
+        margin-bottom: 8px;
+      }
+
+      .leetcode-card p {
+        font-size: 0.95em;
+        color: #666;
+      }
+    </style>
   </body>
 </html>
