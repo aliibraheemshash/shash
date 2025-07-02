@@ -13,13 +13,11 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       body {
         font-family: "Roboto", sans-serif;
         background: linear-gradient(to bottom right, #f0f0f0, #e0e0ff);
-        overflow-x: hidden; /* prevent horizontal scroll */
+        overflow-x: hidden;
       }
-
       header {
         width: 100vw;
         background-color: #222;
@@ -27,7 +25,6 @@
         padding: 40px 20px;
         text-align: center;
       }
-
       nav {
         width: 100vw;
         background-color: #333;
@@ -37,18 +34,15 @@
         gap: 20px;
         padding: 15px 10px;
       }
-
       nav a {
         color: #f0f0f0;
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s;
       }
-
       nav a:hover {
         color: #ffcc00;
       }
-
       .btn-download {
         display: inline-block;
         padding: 10px 20px;
@@ -58,33 +52,35 @@
         border-radius: 5px;
         margin-top: 20px;
       }
-
       section {
         padding: 40px 20px;
         max-width: 900px;
         margin: auto;
       }
-
+      li:not(:last-child) {
+        margin-bottom: 8px;
+      }
       h2 {
         color: #34495e;
         border-bottom: 2px solid #ddd;
         margin-top: 40px;
         padding-bottom: 10px;
       }
-
       ul {
         padding-left: 20px;
       }
-
       a {
         color: #2980b9;
       }
-
       @media (max-width: 768px) {
         nav {
           flex-direction: column;
           align-items: center;
         }
+      }
+      .subtitle {
+        color: #555;
+        font-size: 1.1em;
       }
     </style>
   </head>
@@ -92,14 +88,14 @@
     <header>
       <h1>Ali Shash</h1>
       <p>
-        Dhanbad, Jharkhand, India | +91-787-067-7731 |
+        Dhanbad, Jharkhand - 826004, India | +91-787-067-7731 |
         <a href="mailto:eng.ali.shash.in@gmail.com" style="color: #f0f0f0"
           >eng.ali.shash.in@gmail.com</a
         >
       </p>
       <a
         class="btn-download"
-        href="https://drive.google.com/file/d/1JDiRQT4Yd1xkt1sVOYm04zpCSp-Q61zY/view?usp=sharing"
+        href="https://drive.google.com/file/d/15p1zFhXQhCTs4xnPVIWc__VJZT_uurrZ/view?usp=sharing"
         download
         >Download CV (PDF)</a
       >
@@ -117,11 +113,12 @@
     <section>
       <h2>Objective</h2>
       <p>
-        Seeking a challenging position in Computer Science and Engineering to
-        leverage my expertise in image processing, deep learning, and data
-        analysis. Aiming to contribute to innovative projects that merge
-        computational techniques with practical problem-solving in areas such as
-        machine learning, computer vision, and data-driven insights.
+        Seeking a challenging position in
+        <b>Computer Science and Engineering</b> to leverage my expertise in
+        <b>Image Processing</b>, <b>Deep Learning</b>, and
+        <b>Computer Vision</b>. Aiming to contribute to innovative projects that
+        merge computational techniques with practical problem-solving in areas
+        such as <b>Healthcare</b> and <b>Autonomous Driving</b>.
       </p>
     </section>
 
@@ -129,20 +126,43 @@
       <h2>Experience</h2>
       <ul>
         <li>
-          <strong>IIT Dhanbad (2024–present)</strong>: TA for Digital Image
-          Processing, Computer Vision, and Advanced Graph Theory Lab.
+          <strong>Indian Institute of Technology Dhanbad</strong> &mdash;
+          Dhanbad, India<br />
+          <em>Teacher Assistant</em> (Aug 2024 &ndash; May 2025)
+          <ul>
+            <li>Teacher assistant in Digital Image Processing course</li>
+            <li>Teacher assistant in Computer Vision course</li>
+            <li>Teacher assistant in Advanced Graph Theory Laboratory</li>
+          </ul>
         </li>
         <li>
-          <strong>TCS iON (2025–present)</strong>: TA for Mastering AI and
-          Emerging Technologies.
+          <strong>TCS iON Digital Learning</strong> &mdash; Remote<br />
+          <em>Teacher Assistant</em> (Feb 2025 &ndash; Apr 2025)
+          <ul>
+            <li>
+              Teacher assistant in Mastering AI and Emerging Technologies course
+            </li>
+          </ul>
         </li>
         <li>
-          <strong>Tishreen University (2021–2023)</strong>: TA in Computer
-          Architecture and Operating Systems Labs.
+          <strong>Tishreen University</strong> &mdash; Lattakia, Syria<br />
+          <em>Teacher Assistant</em> (Jul 2021 &ndash; Jun 2023)
+          <ul>
+            <li>Teacher assistant in Computer Architecture Laboratory</li>
+            <li>Teacher assistant in Operating System Laboratory</li>
+          </ul>
         </li>
         <li>
-          <strong>ZeroOne Company (2022–2023)</strong>: IT Manager - cameras,
-          networks, and accounting systems.
+          <strong>ZeroOne Company</strong> &mdash; Tartous, Syria<br />
+          <em>IT Manager</em> (May 2022 &ndash; May 2023)
+          <ul>
+            <li>
+              Operated and maintained Wi-Fi cameras and surveillance systems
+            </li>
+            <li>Installed telephone and burglar alarm systems</li>
+            <li>Set up and maintained local networks</li>
+            <li>Managed the Al-Khwarizmi Accounting program</li>
+          </ul>
         </li>
       </ul>
     </section>
@@ -150,59 +170,178 @@
     <section>
       <h2>Education</h2>
       <ul>
-        <li><strong>M.Tech, IIT Dhanbad</strong> – GPA: 7.34</li>
         <li>
-          <strong>Bachelor's, Tishreen University</strong> – Grade: 82.88%
+          <strong>Indian Institute of Technology Dhanbad</strong> (Aug 2023
+          &ndash; May 2025)<br />
+          Master of Technology in Computer Science and Engineering<br />
+          <b>GPA:</b> 8.29/10.00
         </li>
-        <li><strong>High School, Al-souda</strong> – GPA: 93.45%</li>
+        <li>
+          <strong>Tishreen University</strong> (Dec 2020)<br />
+          Bachelor in Informatics Technology Engineering, Latakia, Syria<br />
+          <b>Grade:</b> 82.88%
+        </li>
+        <li>
+          <strong>Al-souda High School</strong> (Jul 2015)<br />
+          Secondary Education (Scientific Stream), Tartous, Syria<br />
+          <b>GPA:</b> 93.45%
+        </li>
       </ul>
     </section>
 
     <section>
       <h2>Projects and Tutorials</h2>
       <ul>
-        <li><strong>SMTP Email Sender</strong>: Bulk email via Gmail SMTP</li>
-        <li><strong>FFmpeg Mastery</strong>: Guide for media editing</li>
         <li>
-          <strong>ChatBot</strong>: LSTM-based sentiment analysis with Gradio UI
+          <b>Dissertation:</b> Designing Superpixel-Based Multi-Resolution Model
+          for Enhanced Object Delineation (May 2025)<br />
+          <i>Tools:</i> Python, OpenCV, NumPy, SciPy, scikit-image, Matplotlib
+          <ul>
+            <li>
+              Designed a segmentation model combining superpixels and
+              multi-resolution analysis
+            </li>
+            <li>
+              Used Fuzzy C-Means with LAB, spatial, texture, and contour
+              features
+            </li>
+            <li>
+              Built an affinity graph and applied hierarchical normalized cuts
+            </li>
+            <li>
+              Improved boundaries with mean-shift merging and morphological
+              filters
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>SMTP Email Sender:</b> Automated Email Sending (Mar 2025)<br />
+          <i>Tools:</i> Python, smtplib, email, Gmail SMTP Server
+          <ul>
+            <li>
+              Developed a Python script to send emails via Gmail’s SMTP server
+            </li>
+            <li>Added support for bulk email sending with recipient lists</li>
+          </ul>
+        </li>
+        <li>
+          <b>FFmpeg Mastery:</b> A Practical Guide for Media Processing (Feb
+          2025)<br />
+          <i>Tools:</i> FFmpeg, PowerShell, Bash, Video Editing Tools
+          <ul>
+            <li>Developed a step-by-step FFmpeg guide for beginners</li>
+            <li>
+              Implemented batch video editing and text overlays for watermarking
+              or branding
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>ChatBot:</b> Analyze the Sentiment of User Input (Jan 2025)<br />
+          <i>Tools:</i> NLTK, Gradio, Scikit-learn, TensorFlow/Keras, Pickle
+          <ul>
+            <li>
+              Developed a product review sentiment analyzer using an LSTM neural
+              network
+            </li>
+            <li>
+              Utilized data preprocessing techniques to enhance model
+              performance
+            </li>
+            <li>
+              Integrated the model with Gradio for interactive user interface
+            </li>
+          </ul>
         </li>
       </ul>
     </section>
 
     <section>
       <h2>Skills</h2>
-      <p>
-        Python, Java, C, HTML/CSS/JS, MySQL, PyTorch, scikit-learn, AWS, Git,
-        LaTeX, MATLAB...
-      </p>
+      <ul>
+        <li><b>Programming Languages:</b> Python, Java, C</li>
+        <li><b>Web Technologies:</b> HTML, CSS, JavaScript</li>
+        <li><b>Database Systems:</b> MySQL, SQLite</li>
+        <li>
+          <b>Data Science & Machine Learning:</b> PyTorch, scikit-learn, NumPy,
+          Pandas, Matplotlib, Seaborn
+        </li>
+        <li><b>Cloud Technologies:</b> AWS</li>
+        <li><b>DevOps & Version Control:</b> Git, GitHub</li>
+        <li>
+          <b>Specialized Areas:</b> Fuzzy C-Means Clustering, Optimization
+          Techniques
+        </li>
+        <li><b>Mathematical & Statistical Tools:</b> MATLAB</li>
+        <li>
+          <b>Other Tools & Technologies:</b> LaTeX, Jupyter Notebook, VS Code,
+          PyCharm, Anaconda
+        </li>
+        <li>
+          <b>Research Skills:</b> Data Visualization, Algorithm Analysis,
+          Presentation Skills
+        </li>
+      </ul>
     </section>
 
     <section>
-      <h2>Certifications & Awards</h2>
+      <h2>Honors and Awards</h2>
       <ul>
         <li>
-          MARTYR BASSEL AL ASSAD’s Certificate for Academic Excellence (2020)
+          <b>MARTYR BASSEL AL ASSAD’s Certificate for Academic Excellence</b>
+          (Jan 2020)<br />
+          Tishreen University<br />
+          Certificate presented for excellence in the academic year
         </li>
-        <li>Deep Neural Networks, Algebra, Programming with GPUs – Coursera</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Algebra (Sept 2024)</li>
+        <li>Deep Neural Networks (Jan 2024)</li>
+        <li>Programming with GPUs (Aug 2024)</li>
       </ul>
     </section>
 
     <section>
       <h2>Languages</h2>
-      <p>English, Arabic (fluent); Learning: Spanish, French</p>
+      <ul>
+        <li>English (Proficiency level)</li>
+        <li>Arabic (Proficiency level)</li>
+        <li>Interests: Spanish, French</li>
+      </ul>
     </section>
 
     <section>
       <h2>References</h2>
-      <p>Available upon request or see original PDF.</p>
+      <ul>
+        <li>
+          <b>Prof. Susanta Mukhopadhyay</b><br />
+          Associate Professor, Computer Science and Engineering, IIT (ISM)
+          Dhanbad<br />
+          Email: msushanta2001@iitism.ac.in<br />
+          Phone: +91-983-121-1973<br />
+          Relationship: Thesis Advisor
+        </li>
+        <li>
+          <b>Prof. Haider Banka</b><br />
+          Associate Professor, Computer Science and Engineering, IIT (ISM)
+          Dhanbad<br />
+          Email: haider@iitism.ac.in<br />
+          Phone: +91-326-223-5668<br />
+          Relationship: Project Supervisor
+        </li>
+        <li>
+          <b>Prof. Ahmad Ahmad</b><br />
+          Associate Professor, Informatics Engineering, Tishreen University,
+          Syria<br />
+          Email: ahmad.m.ahmad@tishreen.edu.sy<br />
+          Phone: +963-994-778-544<br />
+          Relationship: Bachelor Final Year Project Supervisor
+        </li>
+      </ul>
     </section>
   </body>
-<footer style="text-align: center; font-size: 14px; padding: 10px;">
-  &copy; <span id="year"></span> Ali Shash. All rights reserved.
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
 </html>
